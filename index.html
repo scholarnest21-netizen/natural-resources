@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2: Natural Resources & Their Conservation | ScholarNest</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --forest: #1a6b3c;
+    --forest-light: #2d9e5f;
+    --leaf: #4caf73;
+    --sky: #1976b8;
+    --water: #29a3d4;
+    --earth: #a0522d;
+    --sun: #f9a825;
+    --sand: #f5f0e8;
+    --dark: #1c2b1e;
+    --text: #2c3e2d;
+    --muted: #5a6b5c;
+    --card-bg: #ffffff;
+    --border: #d4e8d8;
+    --accent: #e8f5ed;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: #f0f7f2;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: linear-gradient(135deg, #0d3d20 0%, #1a6b3c 50%, #1976b8 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-bg-circles {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .header-bg-circles circle { opacity: 0.07; }
+
+  .logo-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.2);
+  }
+
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, #f9a825, #ff7043);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 900; color: white;
+    letter-spacing: -1px;
+    box-shadow: 0 4px 12px rgba(249,168,37,0.4);
+  }
+
+  .logo-text { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo-text span { color: #f9a825; }
+  .logo-sub { font-size: 11px; opacity: 0.7; letter-spacing: 1px; text-transform: uppercase; }
+
+  .header-content {
+    padding: 50px 40px 60px;
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+
+  .chapter-badge {
+    display: inline-block;
+    background: rgba(249,168,37,0.2);
+    border: 1px solid rgba(249,168,37,0.5);
+    color: #f9c74f;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    padding: 5px 14px; border-radius: 20px;
+    margin-bottom: 16px; text-transform: uppercase;
+  }
+
+  header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.8rem; font-weight: 700;
+    line-height: 1.2; margin-bottom: 16px;
+  }
+
+  header h1 span { color: #a5d6a7; }
+
+  header p {
+    font-size: 1.05rem; opacity: 0.85;
+    max-width: 620px; margin: 0 auto 30px;
+  }
+
+  .toc-pills {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+  }
+
+  .toc-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white; text-decoration: none;
+    font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px;
+    transition: background 0.2s;
+  }
+  .toc-pill:hover { background: rgba(255,255,255,0.25); }
+
+  /* ─── MAIN LAYOUT ─── */
+  .container {
+    max-width: 1100px; margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* ─── SECTION BLOCKS ─── */
+  .section {
+    margin-bottom: 50px;
+  }
+
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .section-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .icon-green  { background: linear-gradient(135deg, #1a6b3c, #4caf73); }
+  .icon-blue   { background: linear-gradient(135deg, #1565c0, #42a5f5); }
+  .icon-brown  { background: linear-gradient(135deg, #6d4c41, #bcaaa4); }
+  .icon-orange { background: linear-gradient(135deg, #e65100, #ffa726); }
+  .icon-teal   { background: linear-gradient(135deg, #00695c, #4db6ac); }
+  .icon-purple { background: linear-gradient(135deg, #4527a0, #9575cd); }
+  .icon-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+  .icon-yellow { background: linear-gradient(135deg, #f57f17, #ffee58); }
+
+  .section-title-group h2 {
+    font-size: 1.5rem; font-weight: 800; color: var(--dark);
+    margin-bottom: 2px;
+  }
+  .section-title-group p { font-size: 0.85rem; color: var(--muted); }
+
+  /* ─── CARDS ─── */
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.05rem; font-weight: 800;
+    color: var(--forest); margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .card p { font-size: 0.92rem; color: var(--text); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  /* ─── DIAGRAM BOXES ─── */
+  .diagram {
+    background: var(--accent);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 16px 0;
+    text-align: center;
+  }
+
+  .diagram h4 {
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--muted); margin-bottom: 20px;
+  }
+
+  /* Classification Tree */
+  .tree { display: flex; flex-direction: column; align-items: center; }
+  .tree-root {
+    background: var(--forest); color: white;
+    padding: 10px 28px; border-radius: 30px;
+    font-weight: 700; font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .tree-connector {
+    width: 2px; height: 24px;
+    background: var(--muted);
+  }
+  .tree-branch {
+    display: flex; gap: 30px;
+    position: relative;
+  }
+  .tree-branch::before {
+    content: ''; position: absolute; top: 0; left: 50px; right: 50px; height: 2px;
+    background: var(--muted);
+  }
+  .tree-node {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 6px;
+  }
+  .tree-node-line {
+    width: 2px; height: 20px;
+    background: var(--muted);
+  }
+  .tree-label {
+    padding: 8px 18px; border-radius: 24px;
+    font-size: 0.85rem; font-weight: 700;
+    white-space: nowrap;
+  }
+  .tl-green  { background: #e8f5e9; color: #2e7d32; border: 2px solid #81c784; }
+  .tl-blue   { background: #e3f2fd; color: #1565c0; border: 2px solid #64b5f6; }
+  .tl-orange { background: #fff3e0; color: #e65100; border: 2px solid #ffb74d; }
+
+  .tree-leaf {
+    font-size: 0.78rem; color: var(--muted);
+    max-width: 120px; text-align: center;
+    margin-top: 4px;
+  }
+
+  /* Water Cycle Diagram */
+  .water-cycle-svg { width: 100%; max-width: 600px; }
+
+  /* Soil Profile */
+  .soil-profile {
+    display: flex; gap: 16px; align-items: stretch;
+    max-width: 500px; margin: 0 auto;
+  }
+  .soil-layer-wrap {
+    display: flex; flex-direction: column;
+    width: 120px;
+  }
+  .soil-layer {
+    padding: 12px 10px;
+    font-size: 0.8rem; font-weight: 700; color: white;
+    text-align: center;
+  }
+  .sh-o { background: #5d4037; }
+  .sh-a { background: #795548; }
+  .sh-e { background: #8d6e63; }
+  .sh-b { background: #a1887f; }
+  .sh-c { background: #bcaaa4; }
+  .sh-r { background: #b0bec5; }
+  .soil-desc {
+    display: flex; flex-direction: column; justify-content: space-around;
+    text-align: left;
+  }
+  .soil-desc-item {
+    font-size: 0.8rem; color: var(--text);
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+  }
+  .soil-desc-item strong { color: var(--forest); }
+
+  /* Energy Donut */
+  .energy-grid {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+  }
+  .energy-chip {
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.83rem; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ec-green  { background: #e8f5e9; color: #2e7d32; }
+  .ec-gray   { background: #eceff1; color: #455a64; }
+
+  /* Deforestation Flow */
+  .flow {
+    display: flex; align-items: center; flex-wrap: wrap;
+    gap: 8px; justify-content: center;
+  }
+  .flow-box {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 0.82rem; font-weight: 700;
+    color: var(--dark);
+    white-space: nowrap;
+  }
+  .flow-arrow { font-size: 1.2rem; color: var(--muted); }
+
+  /* ─── HIGHLIGHT BOXES ─── */
+  .highlight {
+    border-left: 4px solid var(--forest);
+    background: var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 10px 10px 0;
+    margin: 12px 0;
+    font-size: 0.9rem;
+  }
+  .highlight.blue  { border-color: var(--sky); background: #e3f2fd; }
+  .highlight.amber { border-color: var(--sun); background: #fff8e1; }
+  .highlight.red   { border-color: #e53935; background: #ffebee; }
+  .highlight strong { display: block; margin-bottom: 4px; font-weight: 800; }
+
+  /* ─── LISTS ─── */
+  .styled-list {
+    list-style: none; padding: 0;
+  }
+  .styled-list li {
+    padding: 7px 0 7px 26px;
+    position: relative;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .styled-list li::before {
+    content: '▸';
+    position: absolute; left: 0;
+    color: var(--leaf); font-size: 0.85rem;
+  }
+  .styled-list li:last-child { border-bottom: none; }
+
+  /* ─── TABLE ─── */
+  .table-wrap { overflow-x: auto; border-radius: 12px; }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  thead { background: var(--forest); color: white; }
+  thead th { padding: 12px 16px; font-weight: 700; text-align: left; }
+  tbody tr:nth-child(even) { background: var(--accent); }
+  tbody tr:nth-child(odd)  { background: white; }
+  tbody td { padding: 10px 16px; border-bottom: 1px solid var(--border); }
+
+  /* ─── CASE STUDY BOXES ─── */
+  .case-study {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border: 2px solid #f9c74f;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .case-study .cs-tag {
+    font-size: 10px; font-weight: 800; letter-spacing: 2px;
+    text-transform: uppercase; color: #f57f17;
+    margin-bottom: 6px; display: block;
+  }
+  .case-study h4 { color: #e65100; font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
+  .case-study p { font-size: 0.88rem; }
+
+  /* ─── TAGS ─── */
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag {
+    font-size: 0.75rem; font-weight: 700;
+    padding: 4px 10px; border-radius: 20px;
+    background: #e8f5e9; color: #2e7d32;
+  }
+  .tag.blue   { background: #e3f2fd; color: #1565c0; }
+  .tag.red    { background: #ffebee; color: #c62828; }
+  .tag.orange { background: #fff3e0; color: #bf360c; }
+
+  /* ─── SUMMARY BAND ─── */
+  .summary-band {
+    background: linear-gradient(135deg, #0d3d20, #1a6b3c);
+    color: white;
+    border-radius: 20px;
+    padding: 36px;
+    margin: 40px 0;
+  }
+  .summary-band h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem; margin-bottom: 20px;
+    color: #a5d6a7;
+  }
+  .summary-points {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .sp {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.87rem;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .sp-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.82rem;
+  }
+  footer strong { color: #f9a825; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 700px) {
+    header h1 { font-size: 1.8rem; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .summary-points { grid-template-columns: 1fr; }
+    .logo-bar { padding: 16px 20px; }
+    .header-content { padding: 30px 20px 40px; }
+    .container { padding: 24px 16px; }
+    .tree-branch { gap: 14px; }
+    .tree-label { font-size: 0.75rem; padding: 6px 12px; }
+    .soil-profile { flex-direction: column; align-items: center; }
+  }
+
+  /* ─── ANCHOR SCROLL OFFSET ─── */
+  [id] { scroll-margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header>
+  <svg class="header-bg-circles" viewBox="0 0 1100 400" preserveAspectRatio="xMidYMid slice">
+    <circle cx="80"  cy="80"  r="160" fill="white"/>
+    <circle cx="950" cy="320" r="200" fill="white"/>
+    <circle cx="550" cy="50"  r="100" fill="white"/>
+  </svg>
+
+  <div class="logo-bar">
+    <div class="logo-icon">SN</div>
+    <div>
+      <div class="logo-text">Scholar<span>Nest</span></div>
+      <div class="logo-sub">Smart Notes · Clear Concepts</div>
+    </div>
+  </div>
+
+  <div class="header-content">
+    <div class="chapter-badge">📚 Environmental Studies · Chapter 2</div>
+    <h1>Natural Resources &amp;<br><span>Their Conservation</span></h1>
+    <p>Complete chapter notes covering classification, forests, water, minerals, food, energy, and land resources — with diagrams and case studies.</p>
+    <div class="toc-pills">
+      <a class="toc-pill" href="#classification">Classification</a>
+      <a class="toc-pill" href="#forests">Forest Resources</a>
+      <a class="toc-pill" href="#water">Water Resources</a>
+      <a class="toc-pill" href="#minerals">Minerals</a>
+      <a class="toc-pill" href="#food">Food Resources</a>
+      <a class="toc-pill" href="#energy">Energy Resources</a>
+      <a class="toc-pill" href="#land">Land Resources</a>
+      <a class="toc-pill" href="#conservation">Conservation</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<div class="container">
+
+  <!-- ── 1. CLASSIFICATION ── -->
+  <div class="section" id="classification">
+    <div class="section-header">
+      <div class="section-icon icon-green">🌿</div>
+      <div class="section-title-group">
+        <h2>2.1 Classification of Natural Resources</h2>
+        <p>How resources are categorized based on origin and replenishability</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📖 What are Natural Resources?</h3>
+      <p>Natural resources are the raw materials provided by nature that are essential for life on Earth. They include substances from the living and non-living world that humans transform into valuable goods and services. Examples include soil, timber, oil, water, minerals, and even scenic landscapes.</p>
+    </div>
+
+    <!-- Classification Diagram -->
+    <div class="diagram">
+      <h4>🌳 Classification Diagram</h4>
+      <div class="tree">
+        <div class="tree-root">Natural Resources</div>
+        <div class="tree-connector"></div>
+        <!-- Row 1: By Origin -->
+        <div style="font-size:0.78rem;color:var(--muted);font-weight:700;letter-spacing:1px;margin-bottom:4px;">BY ORIGIN</div>
+        <div class="tree-branch" style="margin-bottom:24px;">
+          <div class="tree-node">
+            <div class="tree-node-line"></div>
+            <div class="tree-label tl-green">🌱 Biotic Resources</div>
+            <div class="tree-leaf">From living world<br>e.g. wood, humus, fish</div>
+          </div>
+          <div class="tree-node">
+            <div class="tree-node-line"></div>
+            <div class="tree-label tl-blue">🪨 Abiotic Resources</div>
+            <div class="tree-leaf">From non-living world<br>e.g. land, water, air, minerals</div>
+          </div>
+        </div>
+        <!-- Row 2: By Utility -->
+        <div style="font-size:0.78rem;color:var(--muted);font-weight:700;letter-spacing:1px;margin-bottom:4px;">BY CONTINUAL UTILITY</div>
+        <div class="tree-branch">
+          <div class="tree-node">
+            <div class="tree-node-line"></div>
+            <div class="tree-label tl-green">♻️ Renewable</div>
+            <div class="tree-leaf">Replenished naturally<br>e.g. solar, wind, forests</div>
+          </div>
+          <div class="tree-node">
+            <div class="tree-node-line"></div>
+            <div class="tree-label tl-orange">⛽ Non-Renewable</div>
+            <div class="tree-leaf">Cannot be replenished<br>e.g. coal, oil, minerals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>♻️ Renewable Resources</h3>
+        <p>Resources that can be continuously harvested with proper planning. They replenish through natural ecological cycles.</p>
+        <div class="tags">
+          <span class="tag">Solar Energy</span><span class="tag">Wind Energy</span>
+          <span class="tag">Forests</span><span class="tag">Water</span>
+          <span class="tag">Animals</span><span class="tag">Plants</span>
+        </div>
+        <div class="highlight" style="margin-top:12px;">
+          <strong>Key Point:</strong> Sustainable use means consuming at a rate ≤ the rate of replacement.
+        </div>
+      </div>
+      <div class="card">
+        <h3>⛽ Non-Renewable Resources</h3>
+        <p>Resources that cannot be replenished by natural means. Once used up, they have very little chance of recovery. They must be used wisely for future generations.</p>
+        <div class="tags">
+          <span class="tag orange">Coal</span><span class="tag orange">Petroleum</span>
+          <span class="tag orange">Minerals</span><span class="tag orange">Natural Gas</span>
+        </div>
+        <div class="highlight red" style="margin-top:12px;">
+          <strong>Warning:</strong> Being consumed at an alarmingly high rate. Exhaustible resources!
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>⚠️ Problems Associated with Natural Resources</h3>
+      <ul class="styled-list">
+        <li><strong>Unequal Consumption:</strong> Developed nations consume far more — the USA with just 4% of world population uses ~25% of world resources.</li>
+        <li><strong>Animal food requires more land:</strong> Countries dependent on non-vegetarian diets need larger areas for pastureland.</li>
+        <li><strong>Corruption:</strong> Natural resource sectors are fertile ground for corruption across developing nations.</li>
+        <li><strong>Environmental impact:</strong> Every stage of extraction–processing–manufacturing–disposal affects the environment.</li>
+        <li><strong>Water scarcity:</strong> Lack of potable water leads to disease epidemics like cholera and HIV-related illness.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── 2. FOREST RESOURCES ── -->
+  <div class="section" id="forests">
+    <div class="section-header">
+      <div class="section-icon icon-green">🌲</div>
+      <div class="section-title-group">
+        <h2>2.2 Forest Resources</h2>
+        <p>Types, uses, products, and the crisis of deforestation</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌳 What is a Forest?</h3>
+      <p>A forest is a biotic community with a predominance of trees. It is one of the most precious gifts of nature — restoring oxygen, providing medicines, regulating climate, controlling water run-off, and providing food and shelter for wildlife. India has 16 major forest types subdivided into 221 minor types.</p>
+    </div>
+
+    <div class="diagram">
+      <h4>📍 Major Forest Types in India</h4>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+        <div style="background:#e8f5e9;border:2px solid #81c784;border-radius:12px;padding:12px 18px;text-align:center;min-width:160px;">
+          <div style="font-size:1.5rem;">🌧️</div>
+          <div style="font-weight:800;color:#2e7d32;font-size:0.9rem;">Tropical Evergreen</div>
+          <div style="font-size:0.78rem;color:#555;margin-top:4px;">NE India, Western Ghats, Andaman &amp; Nicobar</div>
+        </div>
+        <div style="background:#f3e5f5;border:2px solid #ce93d8;border-radius:12px;padding:12px 18px;text-align:center;min-width:160px;">
+          <div style="font-size:1.5rem;">🍂</div>
+          <div style="font-weight:800;color:#6a1b9a;font-size:0.9rem;">Tropical Deciduous</div>
+          <div style="font-size:0.78rem;color:#555;margin-top:4px;">Central &amp; peninsular India (monsoon forests)</div>
+        </div>
+        <div style="background:#e3f2fd;border:2px solid #90caf9;border-radius:12px;padding:12px 18px;text-align:center;min-width:160px;">
+          <div style="font-size:1.5rem;">🏔️</div>
+          <div style="font-weight:800;color:#0d47a1;font-size:0.9rem;">Dry Alpine Shrubs</div>
+          <div style="font-size:0.78rem;color:#555;margin-top:4px;">Himalayas at high altitudes</div>
+        </div>
+        <div style="background:#fff8e1;border:2px solid #ffe082;border-radius:12px;padding:12px 18px;text-align:center;min-width:160px;">
+          <div style="font-size:1.5rem;">🌊</div>
+          <div style="font-weight:800;color:#e65100;font-size:0.9rem;">Mangrove / Riparian</div>
+          <div style="font-size:0.78rem;color:#555;margin-top:4px;">Coastal areas &amp; river banks</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>✅ Direct Uses of Forests</h3>
+        <ul class="styled-list">
+          <li><strong>Timber</strong> — plywood, doors, windows, furniture, paper</li>
+          <li><strong>Raw materials</strong> — for large &amp; small-scale industries (bamboo, beedi, seed oil)</li>
+          <li><strong>Edible products</strong> — fruits, nuts, seeds, spices, fodder for animals</li>
+          <li><strong>Natural habitat</strong> — for tribal people (food, fodder, medicines)</li>
+          <li><strong>Manure &amp; fuel wood</strong> — critical energy for rural population</li>
+          <li><strong>National income</strong> — recreation, hunting, fishing; projected ₹2 billion/annum by 2020</li>
+          <li><strong>Medicinal plants</strong> — hundreds of compounds of medicinal value</li>
+          <li><strong>Tourism &amp; ecotourism</strong> — wildlife tourism growing rapidly in India</li>
+          <li><strong>Employment</strong> — forest sector contributes to GDP</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔄 Indirect Uses of Forests</h3>
+        <ul class="styled-list">
+          <li>Minimize natural hazards (floods, droughts, landslides)</li>
+          <li>Retain water in soil → prevent drought</li>
+          <li>Reduce soil erosion &amp; siltation of water bodies</li>
+          <li>Reduce desertification; add humus to soil</li>
+          <li>Provide habitat for wildlife; maintain biodiversity</li>
+          <li>Regulate hydrological cycle through transpiration</li>
+          <li>Regulate atmospheric gases — absorb CO₂, release O₂</li>
+          <li>An average tree inhales 12 kg of CO₂ per year, enough O₂ for a family of four</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Deforestation Section -->
+    <div class="card">
+      <h3>🪓 Deforestation — Causes</h3>
+      <div class="diagram" style="margin:12px 0;">
+        <h4>Flow: Causes of Deforestation</h4>
+        <div class="flow">
+          <div class="flow-box">🌾 Agriculture expansion</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🏙️ Urban expansion</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🏗️ Dams &amp; highways</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🏭 Industrial areas</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🔥 Fuel demand</div><div class="flow-arrow">→</div>
+          <div class="flow-box">⛏️ Mining</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🌾 Shifting cultivation</div><div class="flow-arrow">→</div>
+          <div class="flow-box">🔥 Forest fires</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>💥 Effects of Deforestation</h3>
+      <div class="grid-2">
+        <div>
+          <ul class="styled-list">
+            <li>Loss of natural habitat → loss of biodiversity</li>
+            <li>Increased frequency &amp; intensity of floods</li>
+            <li>Land degradation &amp; soil erosion</li>
+            <li>Loss of forest products (fuel, food, medicine)</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="styled-list">
+            <li>Climate change — deforestation causes ~10% of greenhouse gases</li>
+            <li>Siltation of rivers and lakes</li>
+            <li>Reduced rainfall &amp; increased drought</li>
+            <li>Uprooting of indigenous tribal people</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="case-study">
+        <span class="cs-tag">📍 Case Study</span>
+        <h4>Deforestation in Andaman &amp; Nicobar Islands</h4>
+        <p>The British established a Forest Department in 1883, and large-scale timber extraction using convict labour led to massive deforestation. This caused severe soil erosion, heavy sedimentation in coastal waters, and death of coral reefs. Species like the saltwater crocodile and Andaman wild pig are now endangered.</p>
+      </div>
+      <div class="case-study">
+        <span class="cs-tag">🏔️ Case Study</span>
+        <h4>World's Wettest Area Dries Up — Cherrapunji</h4>
+        <p>Once the wettest spot in India, Cherrapunji's mixed natural forests in the catchment area have been destroyed. With no forests to hold water, most of the 12,000 mm annual rainfall quickly runs off. Springs and rivers dry up after monsoon, causing acute drinking water shortages. Water is now supplied by trucks!</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🛡️ Control of Deforestation</h3>
+      <ul class="styled-list">
+        <li>Mining should be prohibited in protected forest areas</li>
+        <li>Tree felling should be followed by massive plantation drives</li>
+        <li>Environmental laws must be strictly enforced</li>
+        <li>Forest extension through social forestry, agro forestry, recreation forestry</li>
+        <li>Public awareness about medicinal and environmental significance of forests</li>
+      </ul>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>🌱 Environmental Movement — Chipko:</strong> Under Sunderlal Bahuguna's leadership in 1995, women in Tehri Garhwal tied a sacred thread around 1,000 trees and hugged trees marked for felling to prevent cutting. The movement spread 4,870 km from Kashmir to Kohima!
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 3. WATER RESOURCES ── -->
+  <div class="section" id="water">
+    <div class="section-header">
+      <div class="section-icon icon-blue">💧</div>
+      <div class="section-title-group">
+        <h2>2.3 Water Resources</h2>
+        <p>Water cycle, sources, calamities, conflicts, and dams</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>💧 Importance of Water</h3>
+      <p>Water is the elixir of life — an essential component of all living things. It determines weather, shapes land, and regulates climate. The earliest civilizations arose on the banks of perennial rivers.</p>
+      <div class="grid-3" style="margin-top:14px;">
+        <div style="text-align:center;padding:12px;background:#e3f2fd;border-radius:10px;">
+          <div style="font-size:1.6rem;">🌾</div>
+          <div style="font-size:0.8rem;font-weight:700;color:#1565c0;">82.9% for Agriculture</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:#e8f5e9;border-radius:10px;">
+          <div style="font-size:1.6rem;">⚡</div>
+          <div style="font-size:0.8rem;font-weight:700;color:#2e7d32;">4.9% Power Generation</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:#fff3e0;border-radius:10px;">
+          <div style="font-size:1.6rem;">🏭</div>
+          <div style="font-size:0.8rem;font-weight:700;color:#e65100;">3.3% Industries</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Water Cycle Diagram -->
+    <div class="diagram">
+      <h4>💧 The Water Cycle (Hydrological Cycle)</h4>
+      <svg class="water-cycle-svg" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky/Cloud area -->
+        <rect width="600" height="300" fill="#e3f2fd" rx="12"/>
+        <!-- Ground -->
+        <rect x="0" y="210" width="600" height="90" fill="#8d6e63" rx="0"/>
+        <rect x="0" y="210" width="600" height="30" fill="#795548"/>
+        <!-- Mountains -->
+        <polygon points="400,210 470,100 540,210" fill="#6d4c41"/>
+        <polygon points="350,210 440,80 530,210" fill="#5d4037"/>
+        <!-- Sun -->
+        <circle cx="540" cy="50" r="30" fill="#f9a825" opacity="0.9"/>
+        <line x1="540" y1="10" x2="540" y2="0"  stroke="#f9a825" stroke-width="3"/>
+        <line x1="570" y1="20" x2="578" y2="13" stroke="#f9a825" stroke-width="3"/>
+        <line x1="580" y1="50" x2="590" y2="50" stroke="#f9a825" stroke-width="3"/>
+        <!-- Ocean -->
+        <rect x="0" y="180" width="180" height="120" fill="#1976b8" rx="0"/>
+        <text x="85" y="250" text-anchor="middle" fill="white" font-size="13" font-weight="bold">OCEAN</text>
+        <!-- Cloud -->
+        <ellipse cx="280" cy="60" rx="70" ry="30" fill="white" opacity="0.95"/>
+        <ellipse cx="240" cy="65" rx="40" ry="22" fill="white" opacity="0.95"/>
+        <ellipse cx="320" cy="65" rx="45" ry="22" fill="white" opacity="0.95"/>
+        <text x="280" y="65" text-anchor="middle" fill="#1565c0" font-size="11" font-weight="bold">CLOUDS</text>
+        <!-- Evaporation arrow -->
+        <path d="M 120 180 Q 160 120 220 80" stroke="#42a5f5" stroke-width="2.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+        <text x="140" y="135" fill="#1565c0" font-size="10" font-weight="bold" transform="rotate(-40,140,135)">Evaporation</text>
+        <!-- Precipitation arrow -->
+        <path d="M 290 90 Q 270 150 220 200" stroke="#1565c0" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+        <text x="295" y="150" fill="#1565c0" font-size="10" font-weight="bold">Precipitation</text>
+        <!-- Run-off arrow -->
+        <path d="M 210 210 Q 150 215 90 200" stroke="#42a5f5" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+        <text x="130" y="225" fill="#0d47a1" font-size="10" font-weight="bold">Run-off</text>
+        <!-- Infiltration arrow -->
+        <path d="M 250 215 L 250 260" stroke="#8d6e63" stroke-width="2" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+        <text x="257" y="245" fill="#4e342e" font-size="10" font-weight="bold">Infiltration</text>
+        <!-- Transpiration arrow -->
+        <path d="M 460 100 Q 400 70 340 70" stroke="#66bb6a" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+        <text x="380" y="88" fill="#2e7d32" font-size="10" font-weight="bold">Transpiration</text>
+        <!-- Underground water arrow -->
+        <path d="M 250 270 Q 170 270 100 240" stroke="#5c6bc0" stroke-width="2" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+        <text x="140" y="285" fill="#3949ab" font-size="10" font-weight="bold">Groundwater flow</text>
+        <defs>
+          <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 z" fill="#1976b8"/>
+          </marker>
+        </defs>
+      </svg>
+      <p style="font-size:0.8rem;color:var(--muted);margin-top:8px;">Water moves continuously: evaporation → clouds → precipitation → run-off / infiltration → groundwater → back to ocean</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>🌊 Sources of Water</h3>
+        <ul class="styled-list">
+          <li><strong>Rainfall</strong> — most important source; only 3% of total water is fresh</li>
+          <li><strong>Groundwater</strong> — hidden in aquifers; only 0.003% readily available</li>
+          <li><strong>Surface water</strong> — rivers, lakes, ponds, wetlands</li>
+          <li><strong>Glaciers</strong> — locked in polar ice caps</li>
+        </ul>
+        <div class="highlight blue" style="margin-top:12px;">
+          <strong>Aquifer Types:</strong> <em>Confined</em> (sandwiched between impermeable layers) and <em>Unconfined</em> (with a water table).
+        </div>
+      </div>
+      <div class="card">
+        <h3>⚠️ Effects of Over-utilization of Groundwater</h3>
+        <ul class="styled-list">
+          <li>Reduced surface water flow</li>
+          <li>Lowering of water table — in Gujarat, fallen by up to 40 m</li>
+          <li>Water logging &amp; salinity problems</li>
+          <li>Ground subsidence — damage to buildings, pipes</li>
+          <li>Degradation of water quality (salt water intrusion)</li>
+          <li>Increased power costs to lift water higher</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌊 Water Calamities</h3>
+      <div class="grid-2">
+        <div>
+          <div class="highlight blue">
+            <strong>Flood</strong> Unusually large amount of water at one place. Types: Flash floods, River floods, Coastal floods. Annual rainfall in India varies greatly by region → floods &amp; droughts.
+          </div>
+        </div>
+        <div>
+          <div class="highlight red">
+            <strong>Drought</strong> Severe deficiency of water supply due to consistently below-average rainfall. Types: Meteorological, Hydrological, Agricultural. In 2005, parts of the Amazon basin experienced the worst drought in 100 years.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>⚔️ Water Conflicts</h3>
+      <p>Water scarcity leads to conflicts at all levels — international, national, and state. India faces inter-state disputes in Tamil Nadu–Karnataka (Kaveri), Rajasthan–Gujarat (Sardar Sarovar), Punjab–Haryana (SYL canal), etc.</p>
+      <div class="case-study" style="margin-top:12px;">
+        <span class="cs-tag">📍 Case Study</span>
+        <h4>Kaveri Dispute — Karnataka vs Tamil Nadu</h4>
+        <p>Karnataka built three dams on the Kaveri river reducing summer flows to Tamil Nadu. The dispute dates back to 1892. In 1991, the Supreme Court appointed a Tribunal. The issue remains unresolved and has led to state-level violence ("bandhs").</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🏗️ Dams — Benefits &amp; Problems</h3>
+      <div class="grid-2">
+        <div>
+          <div style="font-weight:800;color:#2e7d32;margin-bottom:8px;">✅ Advantages</div>
+          <ul class="styled-list">
+            <li>Irrigation for huge agricultural projects</li>
+            <li>Electricity production (hydro power)</li>
+            <li>Navigation on otherwise unnavigable rivers</li>
+            <li>Recreation (boating, fishing)</li>
+            <li>Flood control</li>
+            <li>Water supply for domestic purposes</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:800;color:#c62828;margin-bottom:8px;">❌ Disadvantages</div>
+          <ul class="styled-list">
+            <li>Deforestation &amp; loss of biodiversity</li>
+            <li>Displacement of tribal people (40–80 million worldwide)</li>
+            <li>Submerges agricultural &amp; forest land</li>
+            <li>Increased frequency of earthquakes</li>
+            <li>Water-borne diseases (malaria, schistosomiasis)</li>
+            <li>Siltation of reservoirs</li>
+            <li>Emissions of greenhouse gases from reservoirs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-study" style="margin-top:12px;">
+        <span class="cs-tag">📍 Case Study</span>
+        <h4>Sardar Sarovar Dam — Uprooted Forests and Tribal People</h4>
+        <p>The Narmada dam project across Gujarat, Maharashtra, and Madhya Pradesh will submerge 573 villages. About 40,000 ha of forest under Narmada Sagar will disappear. Social activist Medha Patkar went on a 20-day hunger strike in 2006 to protest the raising of dam height. The Supreme Court refused the Narmada Bachao Andolan's appeal to stop construction.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 4. MINERAL RESOURCES ── -->
+  <div class="section" id="minerals">
+    <div class="section-header">
+      <div class="section-icon icon-brown">💎</div>
+      <div class="section-title-group">
+        <h2>2.4 Mineral Resources</h2>
+        <p>Types of minerals and environmental effects of mining</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🪨 What are Minerals?</h3>
+      <p>Minerals are naturally occurring chemical compounds formed through inorganic processes under the Earth's crust. India is rich in 35 minerals including iron, aluminium, manganese, chromium, limestone, dolomite, and mica. Minerals are non-renewable — once mined, they cannot be restored or replaced.</p>
+    </div>
+
+    <!-- Mineral Types Diagram -->
+    <div class="diagram">
+      <h4>💎 Types of Minerals</h4>
+      <div class="grid-3">
+        <div style="background:white;border:2px solid #b0bec5;border-radius:14px;padding:16px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:8px;">⚙️</div>
+          <div style="font-weight:800;color:#37474f;margin-bottom:6px;">Metallic Minerals</div>
+          <div style="font-size:0.8rem;color:#546e7a;">Associated with metal ores. Pure metals obtained through chemical process.</div>
+          <div class="tags" style="justify-content:center;margin-top:8px;">
+            <span class="tag">Iron</span><span class="tag">Copper</span><span class="tag">Lead</span><span class="tag">Zinc</span>
+          </div>
+        </div>
+        <div style="background:white;border:2px solid #ce93d8;border-radius:14px;padding:16px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:8px;">💎</div>
+          <div style="font-weight:800;color:#6a1b9a;margin-bottom:6px;">Non-metallic Minerals</div>
+          <div style="font-size:0.8rem;color:#546e7a;">Used in naturally occurring state. Moulded after mining.</div>
+          <div class="tags" style="justify-content:center;margin-top:8px;">
+            <span class="tag" style="background:#f3e5f5;color:#6a1b9a;">Diamond</span>
+            <span class="tag" style="background:#f3e5f5;color:#6a1b9a;">Marble</span>
+            <span class="tag" style="background:#f3e5f5;color:#6a1b9a;">Mica</span>
+          </div>
+        </div>
+        <div style="background:white;border:2px solid #ffcc80;border-radius:14px;padding:16px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:8px;">🔥</div>
+          <div style="font-weight:800;color:#e65100;margin-bottom:6px;">Fuel Minerals</div>
+          <div style="font-size:0.8rem;color:#546e7a;">Utilized as fuel for energy generation.</div>
+          <div class="tags" style="justify-content:center;margin-top:8px;">
+            <span class="tag orange">Coal</span><span class="tag orange">Petroleum</span><span class="tag orange">Natural Gas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Mineral</th><th>Selected Uses</th></tr></thead>
+        <tbody>
+          <tr><td>Aluminium</td><td>Structural material, packaging</td></tr>
+          <tr><td>Gold</td><td>Jewellery, alloys, density measurement</td></tr>
+          <tr><td>Iron</td><td>Primary component of steel</td></tr>
+          <tr><td>Uranium</td><td>Nuclear bombs, electricity, glass tinting</td></tr>
+          <tr><td>Copper</td><td>Pipes, electric wiring, brass, bronze</td></tr>
+          <tr><td>Phosphorus</td><td>Medicines, fertilizers, detergents</td></tr>
+          <tr><td>Sulphur</td><td>Insecticides, rubber tyres, medicines</td></tr>
+          <tr><td>Manganese</td><td>Alloy steels, disinfectants</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3>⛏️ Environmental Effects of Mining</h3>
+      <ul class="styled-list">
+        <li>Accelerates destruction of forests &amp; damages surface features of Earth</li>
+        <li>Leads to soil erosion &amp; reduces soil fertility</li>
+        <li>Generates large amounts of waste, lowering land quality</li>
+        <li>Fumes from smelters pollute air over large areas</li>
+        <li>Mining causes air, water, and land pollution (poisonous gases during blasting)</li>
+        <li>Lowers water table; causes ground subsidence and groundwater pollution</li>
+        <li>Earthquakes and volcanic events can result from disturbing Earth's core</li>
+        <li>Occupational health hazards: asbestosis, silicosis, black lung disease</li>
+        <li>Combustion of coal and petroleum → radioactive pollutants, ash, trace metals</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── 5. FOOD RESOURCES ── -->
+  <div class="section" id="food">
+    <div class="section-header">
+      <div class="section-icon icon-orange">🌾</div>
+      <div class="section-title-group">
+        <h2>2.5 Food Resources</h2>
+        <p>Types, world food problems, modern agriculture, and its effects</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2.5rem;">🌾</div>
+        <h3 style="justify-content:center;">Agricultural Crops</h3>
+        <p>Cereals, pulses, fruits, vegetables. 20 species provide most of world's food including wheat, rice, maize, potato, banana.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2.5rem;">🐄</div>
+        <h3 style="justify-content:center;">Livestock</h3>
+        <p>Milk, meat, eggs, honey. Bird species like chickens are also food sources globally.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2.5rem;">🐟</div>
+        <h3 style="justify-content:center;">Fish</h3>
+        <p>A major food source worldwide. Aquaculture (fresh water) and Mariculture (marine water) for artificial production.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>😟 World Food Problems</h3>
+      <ul class="styled-list">
+        <li><strong>Insufficient production</strong> — many countries face acute food shortage</li>
+        <li><strong>Lack of irrigation</strong> — water scarcity impedes grain production</li>
+        <li><strong>Undernutrition &amp; malnutrition</strong> — one in four children malnourished by 2020</li>
+        <li><strong>Hoarding &amp; black marketing</strong> — creates artificial scarcity</li>
+        <li><strong>Natural hazards</strong> — floods, drought, earthquakes damage agriculture</li>
+        <li><strong>Poor distribution</strong> — unequal access; US food aid feeds fewer people each year</li>
+        <li><strong>Population growth</strong> — food resource diminishing as population rises</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Effects of Modern Agriculture on Environment</h3>
+      <div class="grid-2">
+        <ul class="styled-list">
+          <li><strong>Soil erosion</strong> — excessive ploughing accelerates erosion by wind and water</li>
+          <li><strong>Sedimentation</strong> — degraded water quality, reduced water body depth</li>
+          <li><strong>Fertilizer problems</strong> — excess fertilizer → eutrophication in water bodies</li>
+          <li><strong>Pesticide problems</strong> — kill non-target organisms; enter food chain</li>
+        </ul>
+        <ul class="styled-list">
+          <li><strong>Water logging</strong> — excess irrigation raises water table, increases salinity</li>
+          <li><strong>Climate change</strong> — agriculture adds CO₂; deforestation for cropland</li>
+          <li><strong>Loss of genetic diversity</strong> — monocultures replace traditional diverse varieties</li>
+          <li><strong>Intensification of inequity</strong> — poor farmers cannot afford seeds &amp; fertilizers</li>
+        </ul>
+      </div>
+      <div class="highlight amber" style="margin-top:14px;">
+        <strong>🌿 Sustainable Agriculture:</strong> Ecologically sound, economically viable, socially just, and culturally appropriate. It has three goals — environmental health, economic profitability, and social and economic equity.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🐛 Fertilizers &amp; Pesticides</h3>
+      <div class="grid-2">
+        <div>
+          <div class="highlight amber">
+            <strong>Chemical Fertilizers — Adverse Effects</strong>
+            Excess use → loss of soil fertility. Chemical fertilizers create nitrate pollution in groundwater. Run-off fertilizers speed growth of algae in water bodies (eutrophication). Nitrogen leads to accumulation of nitrates in soil.
+          </div>
+        </div>
+        <div>
+          <div class="highlight red">
+            <strong>Pesticides — Harmful Effects</strong>
+            Not species-specific — kill non-target organisms. Adversely affect frogs, snakes, birds (natural pest controllers). Resistance builds over time. Enter food chain through biomagnification. Cause air, water, and soil pollution.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🐂 Overgrazing</h3>
+      <p>Grazing by a large number of animals for extended periods without recovery time. Causes include continuously increasing livestock population.</p>
+      <ul class="styled-list">
+        <li>Eliminates sensitive, palatable plant species → dominance of alien species</li>
+        <li>Accelerates soil erosion and damages soil fertility</li>
+        <li>Adds accumulated animal wastes to downstream water bodies (eutrophication)</li>
+        <li>Increases land surface reflectivity → lowers temperature of rain, increases drought chance</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── 6. ENERGY RESOURCES ── -->
+  <div class="section" id="energy">
+    <div class="section-header">
+      <div class="section-icon icon-yellow">⚡</div>
+      <div class="section-title-group">
+        <h2>2.6 Energy Resources</h2>
+        <p>Renewable and non-renewable energy sources, and energy recovery</p>
+      </div>
+    </div>
+
+    <!-- Energy Diagram -->
+    <div class="diagram">
+      <h4>⚡ Classification of Energy Sources</h4>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+        <div style="flex:1;min-width:220px;background:#e8f5e9;border:2px solid #81c784;border-radius:14px;padding:18px;">
+          <div style="font-weight:800;color:#2e7d32;font-size:1rem;margin-bottom:10px;">♻️ Renewable Sources</div>
+          <div class="energy-grid">
+            <div class="energy-chip ec-green">☀️ Solar</div>
+            <div class="energy-chip ec-green">💨 Wind</div>
+            <div class="energy-chip ec-green">🌊 Tidal</div>
+            <div class="energy-chip ec-green">🌿 Biomass</div>
+            <div class="energy-chip ec-green">🌋 Geothermal</div>
+            <div class="energy-chip ec-green">🔥 Firewood</div>
+            <div class="energy-chip ec-green">💧 Hydro</div>
+            <div class="energy-chip ec-green">🐄 Animal dung</div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:220px;background:#eceff1;border:2px solid #b0bec5;border-radius:14px;padding:18px;">
+          <div style="font-weight:800;color:#37474f;font-size:1rem;margin-bottom:10px;">⛽ Non-Renewable Sources</div>
+          <div class="energy-grid">
+            <div class="energy-chip ec-gray">🪨 Coal</div>
+            <div class="energy-chip ec-gray">🛢️ Petroleum</div>
+            <div class="energy-chip ec-gray">💨 Natural Gas</div>
+            <div class="energy-chip ec-gray">☢️ Nuclear Power</div>
+          </div>
+          <div style="font-size:0.78rem;color:#546e7a;margin-top:10px;">Available in limited amounts; likely to be exhausted one day.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>☀️ Solar Energy</h3>
+        <p>The Sun is the ultimate source of energy on Earth. Three main applications:</p>
+        <ul class="styled-list">
+          <li><strong>Solar cells (PV/Photovoltaic)</strong> — convert light directly into electricity</li>
+          <li><strong>Solar water heating</strong> — pipes in black-painted panels on rooftops</li>
+          <li><strong>Solar furnaces</strong> — array of mirrors concentrating Sun's energy into a small space for very high temperatures</li>
+        </ul>
+        <div class="highlight amber" style="margin-top:10px;">
+          Disadvantages: Low efficiency, high initial cost, lack of adequate storage. Silicon (needed for cells) is in short supply.
+        </div>
+      </div>
+      <div class="card">
+        <h3>💨 Wind Energy</h3>
+        <p>Used for centuries for ships and windmills. Now used for supplemental electricity. Wind power is highly variable but best for individual home owners.</p>
+        <ul class="styled-list">
+          <li>India's wind-power potential estimated at 20,000 MW</li>
+          <li>Currently generating ~1,020 MW</li>
+          <li>Largest wind farm near Kanyakumari, Tamil Nadu — generates 380 MW</li>
+        </ul>
+        <div class="highlight red" style="margin-top:10px;">
+          Disadvantages: Takes large spaces, destroys scenic beauty, not available everywhere continuously.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>🌋 Geothermal Energy</h3>
+        <p>Places where surface temperature is sufficiently high to produce steam which drives turbines. Very high efficiency and low initial cost. Probably generated from decaying radioactive materials (thorium, uranium, potassium) in Earth's interior. Applications: industrial heating and electricity generation.</p>
+      </div>
+      <div class="card">
+        <h3>🌿 Biomass Energy</h3>
+        <p>Organic matter that can be burnt as fuel or converted to a more convenient form. One of the most important renewable energy sources from ancient times.</p>
+        <ul class="styled-list">
+          <li>Wood, agricultural residues, municipal solid waste</li>
+          <li>Sugar cane can be fermented to make alcohol (ethanol) — Brazil uses 100% ethanol in 20% of vehicles</li>
+          <li>Plant &amp; animal wastes produce biofuels: methanol, natural gas, oil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🪨 Non-Renewable Energy Sources</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Advantages</th><th>Disadvantages</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Coal</strong></td><td>Cheap, spread equitably across world, large world reserves (~200 yrs)</td><td>Emits smoke &amp; CO₂, mining harms environment, can't be used for transport</td></tr>
+            <tr><td><strong>Oil/Petroleum</strong></td><td>Can be used for transport, doesn't cause much mining harm</td><td>Finite world reserves, burning leads to CO₂ &amp; global warming, hydrocarbons may cause headache</td></tr>
+            <tr><td><strong>Natural Gas</strong></td><td>Cheapest, cleanest of fossil fuels, maintenance-free appliances, can be used directly</td><td>Toxic if inhaled in large amounts, highly inflammable, global reserves unevenly distributed</td></tr>
+            <tr><td><strong>Nuclear</strong></td><td>No CO₂ emission, no acid rain, no urban smog</td><td>Produces radioactive waste, plants have life of 30–40 yrs, risk of fatal health disorders</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>♻️ Energy Recovery</h3>
+      <p>Getting energy by burning waste. The calorific value of hydrocarbon plastics is comparable to that of oil. Benefits include reduced coal-fired power plants, improved air quality, slower climate change, and lower fuel bills.</p>
+      <div class="highlight amber">
+        <strong>Advantage of Waste-to-Energy Plants:</strong> Extract energy from trash while incinerators only reduce volume. They reduce trash volume by 90% and have much lower air pollution.
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 7. LAND RESOURCES ── -->
+  <div class="section" id="land">
+    <div class="section-header">
+      <div class="section-icon icon-teal">🌍</div>
+      <div class="section-title-group">
+        <h2>2.7 Land Resources</h2>
+        <p>Soil profile, land degradation, soil erosion, desertification, and wetlands</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Importance of Land</h3>
+      <ul class="styled-list">
+        <li>Human civilization has taken shape on land</li>
+        <li>Land is used for agriculture</li>
+        <li>Contains huge amount of mineral deposits</li>
+        <li>Contains water in underground aquifers</li>
+        <li>Most animals have their habitat on land</li>
+        <li>Provides all resources to fulfil basic human needs: food, cloth, shelter</li>
+      </ul>
+    </div>
+
+    <!-- Soil Profile Diagram -->
+    <div class="diagram">
+      <h4>🪨 Soil Profile — Five Chief Horizons</h4>
+      <div class="soil-profile">
+        <div class="soil-layer-wrap">
+          <div class="soil-layer sh-o">O Horizon</div>
+          <div class="soil-layer sh-a">A Horizon</div>
+          <div class="soil-layer sh-e">E Horizon</div>
+          <div class="soil-layer sh-b">B Horizon</div>
+          <div class="soil-layer sh-c">C Horizon</div>
+          <div class="soil-layer sh-r" style="color:#333;">Bedrock</div>
+        </div>
+        <div class="soil-desc">
+          <div class="soil-desc-item"><strong>O (Organic):</strong> Surface layer; decomposing organic material &amp; debris from trees</div>
+          <div class="soil-desc-item"><strong>A (Topsoil):</strong> Minerals + good organic matter; surface layer of grasslands &amp; agricultural lands</div>
+          <div class="soil-desc-item"><strong>E (Eluviated):</strong> Soluble nutrients leached away; typically light in colour</div>
+          <div class="soil-desc-item"><strong>B (Subsoil):</strong> Deposition of minerals leached from layers above</div>
+          <div class="soil-desc-item"><strong>C (Saprolite):</strong> Least weathered; loose parent material (unconsolidated)</div>
+          <div class="soil-desc-item"><strong>Bedrock:</strong> Solid unweathered rock below all horizons</div>
+        </div>
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);margin-top:12px;">The soil profile is a vertical cross-section showing all horizons from surface to parent rock</p>
+    </div>
+
+    <div class="card">
+      <h3>💧 Functions of Soil</h3>
+      <div class="grid-2">
+        <ul class="styled-list">
+          <li>Significant role in nutrient cycles; releases and stores nutrients for ecosystems</li>
+          <li>Basis of agricultural production</li>
+          <li>Stores water and regulates water supplies</li>
+        </ul>
+        <ul class="styled-list">
+          <li>Regulates emission of trace gases</li>
+          <li>Degrades pollutants &amp; filters groundwater</li>
+          <li>Provides foundation for buildings &amp; structures</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📉 Land Degradation</h3>
+      <p>A number of natural and anthropogenic factors lower the quality of land. The UN Environment Programme estimates that 250 million people are directly affected and more than 1 billion are at risk.</p>
+      <div class="grid-2" style="margin-top:12px;">
+        <div>
+          <div style="font-weight:800;color:#795548;margin-bottom:6px;">🌿 Natural Factors</div>
+          <ul class="styled-list">
+            <li>Heavy rains → removal of topsoil</li>
+            <li>High-speed winds → accelerate soil erosion</li>
+            <li>Natural disasters (earthquakes, floods)</li>
+            <li>Expansion of desert (overgrazing, drought)</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:800;color:#b71c1c;margin-bottom:6px;">🏭 Anthropogenic Factors</div>
+          <ul class="styled-list">
+            <li>Mining — generates waste, destroys vegetation</li>
+            <li>Urbanization — encroaches on fertile land</li>
+            <li>Deforestation — destroys biogeochemical cycles</li>
+            <li>Overgrazing — exposes soil to erosion</li>
+            <li>Construction of dams &amp; canals</li>
+            <li>Excessive use of chemical fertilizers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌊 Soil Erosion — Causes &amp; Effects</h3>
+      <p>Soil erosion = detachment and transportation of topsoil from its resting place by wind and water. Also known as the "creeping death of land."</p>
+      <div class="grid-2" style="margin-top:12px;">
+        <div>
+          <div style="font-weight:800;color:#795548;margin-bottom:6px;">Causes</div>
+          <ul class="styled-list">
+            <li>Large-scale deforestation (responsible for 30% of Earth's seriously eroded land)</li>
+            <li>Floods in rivers (rapid water flow along slopes)</li>
+            <li>Overgrazing by cattle (accounts for 35% of world's soil erosion)</li>
+            <li>Dry violent winds</li>
+            <li>Improper agricultural techniques (absence of contour building)</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:800;color:#c62828;margin-bottom:6px;">Effects</div>
+          <ul class="styled-list">
+            <li>Decreased productivity of land</li>
+            <li>Desertification of land</li>
+            <li>Deposition in water bodies → clogs rivers, causes flooding</li>
+            <li>Loss of revenue from agricultural land</li>
+            <li>Land becomes unfit for agriculture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🏜️ Desertification</h3>
+      <p>Conversion of fertile, non-desertic land into infertile desertic land. The UN (1992) defined it as land degradation in arid, semi-arid, and subhumid areas resulting from climatic variations and human activities.</p>
+      <div class="highlight red">
+        <strong>Scale of Problem:</strong> Every year an area roughly equal to Britain is being converted to desert. 35% of Earth's land surface is at risk. 45,000,000 km² affected. 6,000,000 ha of agricultural land lost every year!
+      </div>
+      <div class="grid-2" style="margin-top:12px;">
+        <div>
+          <div style="font-weight:800;margin-bottom:6px;">🌿 Natural Causes</div>
+          <ul class="styled-list">
+            <li>Very low rainfall / prolonged drought</li>
+            <li>Excessive evaporation</li>
+            <li>Vast diurnal temperature extremes</li>
+            <li>High soil salinity</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:800;margin-bottom:6px;">🏭 Anthropogenic Causes</div>
+          <ul class="styled-list">
+            <li>Continuous cutting of trees</li>
+            <li>Heavy overgrazing</li>
+            <li>Over-irrigation (water logging + salinity)</li>
+            <li>Excessive ploughing</li>
+            <li>Excessive use of fertilizers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌿 Wetlands and Their Functions</h3>
+      <p>Wetlands are lands transitional between terrestrial and aquatic eco-systems, where the water table is at or near the surface, or land is covered by shallow water. Often called "kidneys of the landscape."</p>
+      <div class="grid-2" style="margin-top:10px;">
+        <ul class="styled-list">
+          <li>Retain water during dry periods → keep water table high</li>
+          <li>Mitigate flood and trap suspended solids &amp; nutrients</li>
+          <li>Important feeding and breeding grounds for wildlife</li>
+          <li>Provide stopping place and refuge for waterfowl</li>
+        </ul>
+        <ul class="styled-list">
+          <li>Support species diversity</li>
+          <li>Recycle nutrients, purify water, attenuate floods</li>
+          <li>Maintain stream flow, recharge groundwater</li>
+          <li>India's wetlands support 2400 species and subspecies of birds</li>
+        </ul>
+      </div>
+      <div class="highlight red" style="margin-top:12px;">
+        <strong>⚠️ Wetland Losses:</strong> Draining wetlands has depleted groundwater recharge — in rural India, about 6,000 villages are without a drinking water source. Introduction of exotic species like water hyacinth threatens native vegetation.
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 8. CONSERVATION ── -->
+  <div class="section" id="conservation">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🛡️</div>
+      <div class="section-title-group">
+        <h2>2.8 &amp; 2.9 Conservation &amp; Equitable Use</h2>
+        <p>Individual role in conservation and sustainable lifestyle</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>⚡ Energy Conservation (Individual Level)</h3>
+        <ul class="styled-list">
+          <li>Save electricity → save coal (major source of world's electricity)</li>
+          <li>Replace incandescent bulbs with fluorescent or 100-W bulbs instead of two 60-W</li>
+          <li>Ride bicycles whenever possible</li>
+          <li>Use blank black computer screen instead of screensavers</li>
+          <li>Unplug electronics and kitchen appliances when not in use</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌲 Forest Conservation (Individual Level)</h3>
+        <ul class="styled-list">
+          <li>Use both sides of paper; avoid unnecessary printing</li>
+          <li>Reuse and recycle paper; buy recycled paper</li>
+          <li>Plant trees to prevent further forest degradation</li>
+          <li>Make equitable use of forest products</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>💧 Water Conservation</h3>
+        <ul class="styled-list">
+          <li>Set lawnmower blade high (2–3 inches) → fewer watering needs</li>
+          <li>A household can save up to 20,000 gallons/year by not leaving faucet running during teeth brushing, shaving, washing dishes</li>
+          <li>Wash car at home instead of self-service car wash</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🥗 Sustainable Food</h3>
+        <ul class="styled-list">
+          <li>Vegetarian food habits use less water, fuel, and other natural resources</li>
+          <li>Eat unpackaged food — vegetables and dry beans instead of canned food</li>
+          <li>Eat locally available fruits and vegetables</li>
+          <li>Avoid food waste — plan meals carefully</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Objectives of Conservation Diagram -->
+    <div class="diagram">
+      <h4>🎯 Chief Objectives of Conservation of Natural Resources</h4>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="background:var(--forest);color:white;padding:10px 30px;border-radius:30px;font-weight:800;">Conservation of Natural Resources</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:4px;">
+          <div style="background:white;border:2px solid var(--border);border-radius:12px;padding:12px 16px;text-align:center;min-width:120px;">
+            <div style="font-size:1.4rem;">⚖️</div>
+            <div style="font-size:0.82rem;font-weight:800;color:var(--forest);">Rational Use</div>
+          </div>
+          <div style="background:white;border:2px solid var(--border);border-radius:12px;padding:12px 16px;text-align:center;min-width:120px;">
+            <div style="font-size:1.4rem;">📋</div>
+            <div style="font-size:0.82rem;font-weight:800;color:var(--forest);">Proper Management</div>
+          </div>
+          <div style="background:white;border:2px solid var(--border);border-radius:12px;padding:12px 16px;text-align:center;min-width:120px;">
+            <div style="font-size:1.4rem;">🔮</div>
+            <div style="font-size:0.82rem;font-weight:800;color:var(--forest);">Conserve for Future</div>
+          </div>
+          <div style="background:white;border:2px solid var(--border);border-radius:12px;padding:12px 16px;text-align:center;min-width:120px;">
+            <div style="font-size:1.4rem;">💰</div>
+            <div style="font-size:0.82rem;font-weight:800;color:var(--forest);">Economic &amp; Social Security</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px;">
+          <div style="background:#e8f5e9;border:2px solid #81c784;border-radius:12px;padding:10px 20px;font-size:0.85rem;font-weight:700;color:#2e7d32;">🤝 Harmony Between Needs &amp; Availability</div>
+          <div style="background:#e3f2fd;border:2px solid #90caf9;border-radius:12px;padding:10px 20px;font-size:0.85rem;font-weight:700;color:#1565c0;">🌱 Sustainable Development</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🌏 Equitable Use of Resources for Sustainable Lifestyle</h3>
+      <p>Equitable use means minimizing inequality within and among nations, maintaining sustainable harvest. To ensure equitable use:</p>
+      <ul class="styled-list">
+        <li>Encourage recycling of resources and reuse paper</li>
+        <li>Use alternative energy sources such as solar energy for domestic heating</li>
+        <li>Make equitable use of water for personal and domestic purposes</li>
+        <li>Ensure better use and maintenance of non-renewable resources</li>
+        <li>Prefer usage of renewable and non-conventional energy sources</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── SUMMARY BAND ── -->
+  <div class="summary-band">
+    <h2>📋 Chapter Summary</h2>
+    <div class="summary-points">
+      <div class="sp"><div class="sp-icon">♻️</div><div>Renewable resources (solar, wind, plants, animals) can be continuously harvested with proper planning.</div></div>
+      <div class="sp"><div class="sp-icon">⛽</div><div>Non-renewable resources (coal, minerals, petroleum) cannot be replenished once used up.</div></div>
+      <div class="sp"><div class="sp-icon">🪓</div><div>Deforestation is the removal of forest cover, leading to severe environmental impacts like floods, soil erosion, and climate change.</div></div>
+      <div class="sp"><div class="sp-icon">💧</div><div>Water is essential for life. The world is facing severe freshwater crisis, giving rise to national and international water conflicts.</div></div>
+      <div class="sp"><div class="sp-icon">🏗️</div><div>Big dams cause displacement, deforestation, and biodiversity loss, despite benefits for irrigation and electricity.</div></div>
+      <div class="sp"><div class="sp-icon">💎</div><div>Minerals are non-renewable. Mining causes adverse environmental effects including land, water, and air pollution.</div></div>
+      <div class="sp"><div class="sp-icon">🌾</div><div>Modern agriculture with chemical fertilizers and pesticides deteriorates land and food quality. Organic farming is encouraged.</div></div>
+      <div class="sp"><div class="sp-icon">⚡</div><div>Renewable energy (solar, wind, tidal, biomass, geothermal) must replace non-renewable fossil fuels to meet growing demand sustainably.</div></div>
+      <div class="sp"><div class="sp-icon">🌍</div><div>Land degradation, soil erosion, and desertification are major threats. Wetlands are critical ecological systems ("kidneys of the landscape").</div></div>
+      <div class="sp"><div class="sp-icon">🌱</div><div>Individuals can contribute meaningfully to conservation through energy saving, recycling, sustainable food choices, and water conservation.</div></div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<footer>
+  <div style="font-size:1.1rem;font-weight:800;color:#f9a825;margin-bottom:6px;">ScholarNest</div>
+  <div>Chapter 2 — Natural Resources and Their Conservation</div>
+  <div style="margin-top:4px;opacity:0.6;">Environmental Studies · Complete Chapter Notes with Diagrams</div>
+  <div style="margin-top:8px;">Made with ❤️ by <strong>ScholarNest</strong> — Smart Notes, Clear Concepts</div>
+</footer>
+
+</body>
+</html>
